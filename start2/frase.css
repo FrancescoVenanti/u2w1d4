@@ -12,51 +12,57 @@ div {
   border: 5px solid black;
   padding: 40px;
   width: 800px;
+  overflow: hidden;
+  position: absolute;
 }
 main {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 p {
   font-size: 38px;
-  position: relative;
 }
 
 .parole {
   color: grey;
+  padding-inline: 10px;
 }
 .parole i {
   position: absolute;
-  transform: translateX(8px);
+  text-transform: uppercase;
 }
 
 .parole i:first-child {
   opacity: 0;
-  animation: fade 9s infinite;
+  animation: fade 15s infinite;
 }
 .parole i:nth-child(2) {
   opacity: 0;
-  animation: fade 9s 3s infinite;
+  animation: fade 15s 5s infinite;
 }
 .parole i:nth-child(3) {
   opacity: 0;
-  animation: fade 9s 6s infinite;
+  animation: fade 15s 10s infinite;
 }
 
 @keyframes fade {
   0% {
     opacity: 0;
-    transform: translateY(-40px);
+    transform: translateY(-30px);
+    color: grey;
   }
-  50% {
+  30% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg) translateX(0px);
+    color: orange;
   }
 
-  100% {
+  60% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px) rotate(1080deg) translateX(1000px);
+    color: grey;
   }
 }
