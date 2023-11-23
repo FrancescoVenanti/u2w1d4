@@ -1,0 +1,53 @@
+.container {
+  background-color: grey;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.postit {
+  width: 20%;
+  aspect-ratio: 1/1;
+  margin: 20px;
+  box-shadow: 0 20px 10px rgb(88, 88, 88);
+  cursor: pointer;
+  transition: all 0.1s;
+  animation: attach 3s backwards;
+}
+
+.yellow {
+  background-color: #f6f6c4;
+  transform: rotate(-10deg);
+}
+.green {
+  background-color: #c8f8ca;
+  transform: rotate(5deg);
+}
+.purple {
+  background-color: #c5c5f0;
+  transform: rotate(8deg);
+}
+
+.yellow:hover,
+.green:hover,
+.purple:hover {
+  transform: unset;
+  transform: scale(1.2);
+  transition: all 0.4s;
+}
+
+h2 {
+  font-size: 64px;
+  margin-top: 20%;
+  text-align: center;
+}
+
+@keyframes attach {
+  0% {
+    transform: translateY(1200px);
+  }
+  100% {
+  }
+}
