@@ -34,53 +34,29 @@ p {
 
 .parole i:first-child {
   opacity: 0;
-  animation: fade1 10s infinite;
+  animation: fade 9s infinite;
 }
 .parole i:nth-child(2) {
   opacity: 0;
-  animation: fade2 10s infinite;
+  animation: fade 9s 3s infinite;
 }
 .parole i:nth-child(3) {
   opacity: 0;
-  animation: fade3 10s infinite;
+  animation: fade 9s 6s infinite;
 }
 
-@keyframes fade1 {
+@keyframes fade {
   0% {
     opacity: 0;
+    transform: translateY(-40px);
   }
-  30% {
+  50% {
     opacity: 1;
+    transform: translateY(0px);
   }
-  31% {
+
+  100% {
     opacity: 0;
-  }
-}
-@keyframes fade2 {
-  0% {
-    opacity: 0;
-  }
-  32% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  61% {
-    opacity: 0;
-  }
-}
-@keyframes fade3 {
-  0% {
-    opacity: 0;
-  }
-  61% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  }
-  91% {
-    opacity: 0;
+    transform: translateY(40px);
   }
 }
